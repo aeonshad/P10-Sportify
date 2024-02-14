@@ -8,7 +8,8 @@ const performances = {
 };
 
 export function formatPerformances(data) {
-    let value = data.data.data;
+    let value = JSON.parse(JSON.stringify(data.data.data));
+    //let value = data.data.data;
     for (let i = 0; i < value.length; i++) {
         value[i].kind = performances[i + 1];
     }
@@ -26,8 +27,8 @@ const sessions = {
 };
 
 export function formatSessions(data) {
-    //let value = JSON.parse(JSON.stringify(data.data.sessions));
-    let value = data.data.sessions;
+    let value = JSON.parse(JSON.stringify(data.data.sessions));
+    //let value = data.data.sessions;
     for (let i = 0; i < value.length; i++) {
         value[i].day = sessions[i + 1];
     }
@@ -42,6 +43,5 @@ export function formatActivity(data) {
         let formattedDate = date.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
         value[i].day = formattedDate;
     }
-    console.log(value);
     return value;
 }

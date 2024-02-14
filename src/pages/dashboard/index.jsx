@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 function Dashboard() {
     const { idUser } = useParams();
     const { data: userData, isLoading, error } = useUserData(idUser);
-
+    console.log(userData);
     if (error) {
         console.log(error);
     }

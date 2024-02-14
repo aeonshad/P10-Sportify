@@ -1,19 +1,25 @@
 import { useFetch } from '../utils/hooks/useFetch';
 
-const urlApi = 'http://localhost:3000/user';
+const isMocked = true;
+let urlApi = '';
+if (isMocked) {
+    urlApi = '/data';
+} else {
+    urlApi = 'http://localhost:3000';
+}
 
 export function useUserData(idUser) {
-    return useFetch(`${urlApi}/${idUser}`);
+    return useFetch(`${urlApi}/user/${idUser}`, isMocked);
 }
 
 export function useUserAverageSession(idUser) {
-    return useFetch(`${urlApi}/${idUser}/average-sessions`);
+    return useFetch(`${urlApi}/user/${idUser}/average-sessions`, isMocked);
 }
 
 export function useUserActivity(idUser) {
-    return useFetch(`${urlApi}/${idUser}/activity`);
+    return useFetch(`${urlApi}/user/${idUser}/activity`, isMocked);
 }
 
 export function useUserPerformance(idUser) {
-    return useFetch(`${urlApi}/${idUser}/performance`);
+    return useFetch(`${urlApi}/user/${idUser}/performance`, isMocked);
 }
