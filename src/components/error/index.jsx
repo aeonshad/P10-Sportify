@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 
+/**
+ * Composant Error
+ * @description Un composant représentant une page d'erreur 404.
+ */
 function Error() {
     return (
         <div className="error-container">

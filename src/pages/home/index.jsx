@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 
+/**
+ * Composant Home
+ * @description Un composant représentant la page d'accueil avec des liens vers des tableaux de bord spécifiques.
+ */
 function Home() {
     return (
         <div className="home-card-container">

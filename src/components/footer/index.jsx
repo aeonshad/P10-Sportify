@@ -3,6 +3,10 @@ import swim from '../../assets/swim.png';
 import bike from '../../assets/bike.png';
 import dumbell from '../../assets/dumbell.png';
 
+/**
+ * Composant Footer
+ * @description Un composant représentant le pied de page de l'application.
+ */
 function Footer() {
     return (
         <footer className="footer">

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
+/**
+ * Composant Header
+ * @description Un composant représentant l'en-tête de l'application avec la barre de navigation.
+ */
 function Header() {
     return (
         <header>

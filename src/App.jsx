@@ -6,6 +6,10 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/home';
 
+/**
+ * Composant App
+ * @description Le composant principal de l'application, définissant les routes et la structure globale.
+ */
 function App() {
     return (
         <Router>
